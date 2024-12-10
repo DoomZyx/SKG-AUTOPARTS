@@ -8,11 +8,11 @@ function Catalogue() {
   return (
     <VehicleProvider>
       <PiecesProvider>
-      <body className="Catalogue">
-        <HeaderCat />
-        <NavCatalogue />
-        <Catalogue_Pieces />
-      </body>
+        <div className="catalogue-body">
+          <HeaderCat />
+          <NavCatalogue />
+          <Catalogue_Pieces />
+        </div>
       </PiecesProvider>
     </VehicleProvider>
   );
