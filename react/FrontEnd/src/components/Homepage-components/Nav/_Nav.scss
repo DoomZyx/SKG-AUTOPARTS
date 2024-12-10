@@ -1,8 +1,8 @@
 .Parts-links {
   display: flex;
-  font-size: 2.5rem; /* Utilisez rem au lieu de px pour une meilleure adaptabilité */
+  font-size: 2.5rem;
   position: absolute;
-  left: 54.5%; /* Centré horizontalement */
+  left: 54.5%; 
   margin-bottom: 3rem;
   transform: translateX(-50%); 
   z-index: 999;
@@ -10,8 +10,8 @@
 .About-links {
   display: flex;
   position: absolute;
-  right: 67.5%; /* Utilisez rem pour une échelle relative */
-  top: 32rem; /* Utilisez rem pour une échelle relative */
+  right: 67.5%; 
+  top: 51%; 
   font-size: 2.5rem;
   z-index: 999;
 }
