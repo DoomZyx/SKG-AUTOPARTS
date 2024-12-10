@@ -1,13 +1,8 @@
 import "../Logo/_Logo.scss";
 import "../../../ScrollSnap/_ScrollSnap.scss";
 import ST1PIC from "../../../assets/ST1-PIC.jpg";
-import { useEffect } from "react";
-import initScrollSnap from "../../../ScrollSnap/ScrollSnap";
 
 function Logo() {
-  useEffect(() => {
-    initScrollSnap(); // Initialise les animations au montage
-  }, []);
 
   return (
     <header>

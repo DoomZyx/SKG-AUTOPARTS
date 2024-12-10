@@ -1,16 +1,10 @@
 import "./_Footer.scss";
 import { Link } from "react-router-dom";
 import Footerimg from "../../../assets/footer-pic.jpg";
-import { useEffect } from "react";
-import initScrollSnap from "../../../ScrollSnap/ScrollSnap";
 import FacebookLogo from "../../../assets/Facebook-logo.png";
 import InstagramLogo from "../../../assets/Instagram-logo.webp";
 
 function Footer() {
-  useEffect(() => {
-    initScrollSnap(); // Initialise les animations au montage
-  }, []);
-
   return (
     <footer>
       <section id="section-3" className="ST3">

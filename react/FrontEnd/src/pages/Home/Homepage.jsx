@@ -3,15 +3,18 @@ import Header from "../../components/Homepage-components/Header-fix/Header.jsx";
 import Nav from "../../components/Homepage-components/Nav/Nav.jsx";
 import Footer from "../../components/Homepage-components/Footer/Footer.jsx";
 import { useEffect } from "react";
+import initScrollSnap from "../../ScrollSnap/ScrollSnap.js";
+import { removeScrollSnap } from "../../ScrollSnap/ScrollSnap.js";
 
 function HomePage() {
   useEffect(() => {
+    // Active ScrollSnap pour la Homepage
+    initScrollSnap();
 
-    document.body.style.overflow = "hidden";
-
+    // Supprime ScrollSnap lors du démontage (lorsqu’on quitte la page)
     return () => {
-
-      document.body.style.overflow = "auto";
+      removeScrollSnap(); // Supprime les écouteurs d'événements
+      document.body.classList.remove("scroll-snap-active"); // Supprime la classe CSS
     };
   }, []);
   return (

@@ -1,3 +1,12 @@
+body.scroll-snap-active {
+  scroll-snap-type: y mandatory; /* Active le scroll snap */
+  overflow-y: scroll; /* Permet le défilement vertical */
+}
+
+body.scroll-snap-active section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
 
 
 section {
