@@ -1,0 +1,93 @@
+.ST3 img {
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.logo {
+  height: 10vh;
+  text-shadow: none;
+  padding-inline: 35px;
+  padding-top: 20px;
+  font-size: 100px;
+}
+
+.footer-content {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  z-index: 9999;
+  display: flex;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
+    -1px 1px 0 black;
+}
+
+.footer-b1 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: start;
+  left: 0px;
+  top: 40%;
+  gap: 15px;
+  padding-inline: 35px;
+  font-size: 30px;
+}
+
+.footer-b2 {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  position: absolute;
+  top: 40.8%;
+  left: 38%;
+  gap: 15px;
+  font-size: 30px;
+}
+
+.footer-b3 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: start;
+  font-size: 30px;
+  top: 40.5%;
+  right: 0%;
+  gap: 15px;
+  padding-inline: 35px;
+}
+
+.follow {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.image-footer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 10px;
+  left: 0;
+  bottom: 0;
+  padding-inline: 35px;
+  & .facebook-logo {
+    width: 40px;
+    height: 5vh;
+    margin-top: 12px;
+  }
+  .instagram-logo {
+    width: 50px;
+    height: 8vh;
+  }
+}
+
+.copyright p {
+  position: absolute;
+  bottom: -40px;
+  left: 10px;
+}

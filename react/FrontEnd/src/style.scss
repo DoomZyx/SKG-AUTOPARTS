@@ -1,0 +1,23 @@
+// Utils
+@use "./Utils/mixins.scss";
+@use "./Utils/variables.scss";
+@use "./Utils/responsive.scss";
+
+// Reset/Base
+@use "./Base/base.scss";
+@use "./Base/reset";
+
+//composants
+
+// Homepage //
+@use "./pages/Home/Homepage";
+@use "./components/Homepage-components/Logo/Logo";
+@use "./components/Homepage-components/Footer/Footer.scss";
+@use "./components/Homepage-components/Header-fix/Header.scss";
+@use "./components/Homepage-components/Nav/Nav.scss";
+@use "./ScrollSnap/ScrollSnap";
+
+// Catalogue //
+
+@use "./components/Catalogue-components/Header-cat/HeaderCat";
+@use "./components/Catalogue-components/Catalogue-main/Catalogue-main";

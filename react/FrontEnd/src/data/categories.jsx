@@ -1,0 +1,77 @@
+export const categories = [
+ {
+   id: 1,
+   name: "Vidange",
+   items: [
+     "Filtre à Huile",
+     "Joints de Vidange",
+     "Filtre à Carburant",
+     "Filtre à Air",
+     "Filtre d'Habitacle",
+     "Huile Moteur",
+   ],
+ },
+
+ {
+   id: 2,
+   name: "Pièces Moteur",
+   items: [
+     "Bougie de préchauffage / Allumage",
+     "Kit de Distribution / Chaîne",
+     "Pompe à Eau",
+     "Thermostat",
+     "Pompe à Huile",
+     "Jauge d'Huile",
+     "Système de Carburants / Pompe",
+     "Injecteur",
+     "Joints d'Injecteur",
+     "Joints de Culasse / Cache Soupape",
+     "Vanne EGR",
+     "Débimètre",
+     "Durites",
+     "TurboCompresseur",
+     "Échappement",
+   ],
+ },
+
+ {
+   id: 3,
+   name: "Freinage",
+   items: [
+     "Plaquettes de Frein",
+     "Disques de Frein",
+     "Étriers",
+     "Kit de Réparation Étrier",
+     "Fléxible de Frein",
+     "Câble de Frein à Main",
+   ],
+ },
+ {
+   id: 4,
+   name: "Boite de Vitesse",
+   items: [
+     "Cardan",
+     "Soufflet de Cardan",
+     "Palier de Cardan",
+     "Embrayage",
+     "Câble de Boite de Vitesse",
+     "Bague de Pilotage",
+     "Emetteur",
+     "Recepteur",
+   ],
+ },
+ {
+   id: 5,
+   name: "Suspension / Direction",
+   items: [
+     "Roulements de Roue",
+     "Rotule de Suspension",
+     "Triangle de Suspensions",
+     "Rotule de direction / Axial",
+     "Bielette de Barre Stabilisatrice",
+     "Ammortisseurs",
+     "Ressorts",
+     "Coupelle de Suspension",
+   ],
+ },
+];

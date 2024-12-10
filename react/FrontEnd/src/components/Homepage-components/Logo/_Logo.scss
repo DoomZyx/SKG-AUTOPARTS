@@ -1,0 +1,22 @@
+.header {
+ width: 100%;
+}
+
+.ST1 img {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+}
+
+.header-logo {
+  & h1 {
+    color: white;
+    font-size: 10em;
+    display: flex;
+    z-index: 9999;
+    position: absolute;
+    left: 19%;
+    top: 37%;
+  }
+}

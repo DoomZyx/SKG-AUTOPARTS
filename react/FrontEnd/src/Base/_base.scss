@@ -1,0 +1,24 @@
+* {
+  font-family: "Cabin";
+  font-weight: 900;
+  color: white;
+ 
+}
+
+a {
+  color: inherit;
+  color: white;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+.ST2 a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, p, span, li, a, i{
+  text-shadow: 2px 2px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}

@@ -1,0 +1,253 @@
+* {
+  font-family: "Cabin";
+  font-weight: 900;
+  color: white;
+}
+
+a {
+  color: inherit;
+  color: white;
+  text-decoration: none;
+}
+
+section a:hover {
+  transform: scale(1.19);
+  text-decoration: underline;
+}
+
+.ST2 a:hover {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  width: 100%;
+}
+
+.ST1 img {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+}
+
+.header-logo h1 {
+  color: white;
+  font-size: 10em;
+  display: flex;
+  z-index: 9999;
+  position: absolute;
+  left: 19%;
+  top: 37%;
+}
+
+.ST3 img {
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logo {
+  height: 10vh;
+  text-shadow: none;
+  padding-inline: 35px;
+  padding-top: 20px;
+  font-size: 100px;
+}
+
+.footer-content {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  z-index: 9999;
+  display: flex;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.footer-b1 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: start;
+  left: 0px;
+  top: 40%;
+  gap: 15px;
+  padding-inline: 35px;
+  font-size: 30px;
+}
+
+.footer-b2 {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  position: absolute;
+  top: 40.8%;
+  left: 38%;
+  gap: 15px;
+  font-size: 30px;
+}
+
+.footer-b3 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: start;
+  font-size: 30px;
+  top: 40.5%;
+  right: 0%;
+  gap: 15px;
+  padding-inline: 35px;
+}
+
+.follow {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.image-footer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 10px;
+  left: 0;
+  bottom: 0;
+  padding-inline: 35px;
+}
+.image-footer-container .facebook-logo {
+  width: 40px;
+  height: 5vh;
+  margin-top: 12px;
+}
+.image-footer-container .instagram-logo {
+  width: 50px;
+  height: 8vh;
+}
+
+.copyright p {
+  position: absolute;
+  bottom: -40px;
+  left: 10px;
+}
+
+.fixed-header {
+  position: absolute;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  background-color: black;
+}
+.fixed-header .headerfix-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 12px;
+}
+
+.Parts-links {
+  display: flex;
+  font-size: 45px;
+  position: absolute;
+  left: 950px;
+  margin-bottom: 30px;
+  z-index: 999;
+}
+
+.About-links {
+  display: flex;
+  position: absolute;
+  right: 1285px;
+  margin-top: 60px;
+  z-index: 999;
+  font-size: 40px;
+}
+
+.ST2 img {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Performances */
+section {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Header-container {
+  background-color: black;
+  width: 100%;
+  height: 15vh;
+  color: black;
+}
+.Header-container .Title {
+  padding: 25px 10px 10px 20px;
+  font-size: 35px;
+}/*# sourceMappingURL=style.css.map */
