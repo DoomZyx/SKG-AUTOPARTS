@@ -5,14 +5,14 @@ import Footer from "../../components/Homepage-components/Footer/Footer.jsx";
 
 function HomePage() {
   return (
-    <body className="homepage">
+    <div className="homepage-body">
       <Header />
       <main>
         <Logo />
         <Nav />
       </main>
       <Footer />
-    </body>
+    </div>
   );
 }
 
