@@ -23,7 +23,7 @@ const db = new sqlite3.Database("./db/vehicles.db", (err) => {
 });
 
 // Servir les fichiers statiques du dossier du Frontend
-app.use(express.static(path.join(__dirname, "../FrontEnd/Build")));
+app.use(express.static(path.join(__dirname, "../FrontEnd/dist")));
 
 // Importer et utiliser les routes des pièces
 const piecesRoutes = require('./routes/pieces'); // Import fichier pieces.js
