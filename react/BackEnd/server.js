@@ -13,17 +13,17 @@ app.use(
   })
 );
 
-// Servir les fichiers statiques du dossier "public"
-app.use(express.static(path.join(__dirname, "../FrontEnd/public")));
-
 // Connexion à la base de données SQLite
-const db = new sqlite3.Database("./vehicles.db", (err) => {
+const db = new sqlite3.Database("./db/vehicles.db", (err) => {
   if (err) {
     console.error("Erreur lors de la connexion à la base de données :", err);
   } else {
     console.log("Connexion à la base de données réussie.");
   }
 });
+
+// Servir les fichiers statiques du dossier du Frontend
+app.use(express.static(path.join(__dirname, "../FrontEnd/Build")));
 
 // Importer et utiliser les routes des pièces
 const piecesRoutes = require('./routes/pieces'); // Import fichier pieces.js
@@ -50,6 +50,11 @@ app.get("/api/vehicle/:plateNumber", (req, res) => {
     }
   );
 });
+
+// Route catch-all pour React
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../FrontEnd/build/index.html"))
+})
 
 // Lancer le serveur
 app.listen(port, () => {
