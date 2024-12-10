@@ -1,11 +1,11 @@
-/* Performances */
+
 
 section {
   transform: translate3d(0, 0, 0);
   will-change: transform;
 }
 
-main::-webkit-scrollbar {
+.homepage-body::-webkit-scrollbar {
   display: none;
 }
 
