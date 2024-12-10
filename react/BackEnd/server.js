@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const sqlite3 = require("sqlite3").verbose();
+const Database = require("better-sqlite3");
 const path = require("path"); // Import nécessaire pour gérer les chemins
 
 const app = express(); // Instanciation de l'application Express
@@ -14,54 +14,55 @@ app.use(
 );
 
 // Connexion à la base de données SQLite
-const db = new sqlite3.Database("./db/vehicles.db", (err) => {
-  if (err) {
-    console.error("Erreur lors de la connexion à la base de données :", err);
-  } else {
-    console.log("Connexion à la base de données réussie.");
-  }
-});
+let db;
+try {
+  db = new Database("./db/vehicles.db");
+  console.log("Connected to SQLite database.");
+} catch (err) {
+  console.error("Error connecting to SQLite database:", err);
+  process.exit(1); // Quitte le processus si la connexion échoue
+}
 
 // Servir les fichiers statiques du dossier du Frontend
 app.use(express.static(path.join(__dirname, "../FrontEnd/dist")));
 
 // Importer et utiliser les routes des pièces
-const piecesRoutes = require('./routes/pieces'); // Import fichier pieces.js
-app.use('/api/pieces', piecesRoutes);
+const piecesRoutes = require("./routes/pieces"); // Import fichier pieces.js
+app.use("/api/pieces", piecesRoutes);
 
-// API pour rechercher un véhicule par plaque
+// Route pour rechercher un véhicule par plaque
 app.get("/api/vehicle/:plateNumber", (req, res) => {
   const plateNumber = req.params.plateNumber;
 
-  db.get(
-    `SELECT * FROM vehicles WHERE plate_number = ?`,
-    [plateNumber],
-    (err, row) => {
-      if (err) {
-        console.error("Erreur SQL :", err.message);
-        res.status(500).json({ error: "Erreur serveur" });
-      } else if (row) {
-        console.log("Véhicule trouvé :", row);
-        res.json(row);
-      } else {
-        console.log("Aucun véhicule trouvé pour :", plateNumber);
-        res.status(404).json({ error: "Véhicule non trouvé" });
-      }
+  try {
+    const stmt = db.prepare(`SELECT * FROM vehicles WHERE plate_number = ?`);
+    const row = stmt.get(plateNumber);
+
+    if (row) {
+      console.log("Véhicule trouvé :", row);
+      res.json(row); // Réponse avec les données trouvées
+    } else {
+      console.log("Aucun véhicule trouvé pour :", plateNumber);
+      res.status(404).json({ error: "Véhicule non trouvé" });
     }
-  );
+  } catch (err) {
+    console.error("Erreur SQL :", err.message);
+    res.status(500).json({ error: "Erreur serveur" });
+  }
 });
 
-// Route catch-all pour React
+// Route catch-all pour React (Frontend)
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../FrontEnd/build/index.html"))
-})
+  res.sendFile(path.join(__dirname, "../FrontEnd/dist/index.html"));
+});
+
+// Middleware pour les erreurs
+app.use((err, req, res, next) => {
+  console.error("Erreur serveur :", err.stack);
+  res.status(500).json({ error: "Erreur interne du serveur" });
+});
 
 // Lancer le serveur
 app.listen(port, () => {
   console.log(`Serveur lancé sur http://localhost:${port}`);
-});
-
-app.use((err, req, res, next) => {
-  console.error("Erreur serveur :", err.stack);
-  res.status(500).json({ error: "Erreur interne du serveur" });
 });

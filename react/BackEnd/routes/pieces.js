@@ -1,35 +1,33 @@
-const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
+const express = require("express");
+const Database = require("better-sqlite3");
 const router = express.Router();
 
-// Configuration de la base SQLite
-const db = new sqlite3.Database('./db/catalogueCLIOIV.dboo');
+// Configuration de la base SQLite avec better-sqlite3
+const db = new Database("./db/catalogueCLIOIV.db");
 
 // Route pour récupérer toutes les pièces
-router.get('/', (req, res) => {
-  db.all(`SELECT * FROM Vehicules_Pieces`, [], (err, rows) => {
-    if (err) {
-      res.status(500).json({ error: err.message });
-      return;
-    }
-    res.json(rows);
-  });
+router.get("/", (req, res) => {
+  try {
+    const rows = db.prepare(`SELECT * FROM Vehicules_Pieces`).all();
+    res.json(rows); // Retourne toutes les lignes
+  } catch (err) {
+    console.error("Erreur SQL :", err.message);
+    res.status(500).json({ error: "Erreur serveur" });
+  }
 });
 
 // Route pour récupérer les pièces d'un véhicule spécifique
-router.get('/:marque/:modele', (req, res) => {
+router.get("/:marque/:modele", (req, res) => {
   const { marque, modele } = req.params;
-  db.all(
-    `SELECT * FROM Vehicules_Pieces WHERE marque = ? AND modele = ?`,
-    [marque, modele],
-    (err, rows) => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-        return;
-      }
-      res.json(rows);
-    }
-  );
+  try {
+    const rows = db
+      .prepare(`SELECT * FROM Vehicules_Pieces WHERE marque = ? AND modele = ?`)
+      .all(marque, modele); // Exécute la requête avec les paramètres
+    res.json(rows); // Retourne les lignes correspondantes
+  } catch (err) {
+    console.error("Erreur SQL :", err.message);
+    res.status(500).json({ error: "Erreur serveur" });
+  }
 });
 
 module.exports = router;
