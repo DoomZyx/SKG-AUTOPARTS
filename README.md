@@ -103,7 +103,9 @@ Ce projet a été conçu pour :
 - Simuler un site e-commerce réel de pièces automobiles.
 - Acquérir une expérience pratique en développement Back-End.
 - Expérimenter la création et la gestion de bases de données avec SQLite.
-- Améliorations futures
+________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Améliorations futures
+ 
 - Mettre en œuvre des requêtes en temps réel avec des API comme SIV ou TecDoc.
 - Améliorer l'interface utilisateur pour une meilleure expérience utilisateur.
 - Ajouter une fonctionnalité de filtrage des pièces par catégories.
