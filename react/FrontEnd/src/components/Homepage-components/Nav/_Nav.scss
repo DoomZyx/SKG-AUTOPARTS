@@ -1,27 +1,20 @@
-
-
 .Parts-links {
- display: flex;
-  font-size: 45px;
+  display: flex;
+  font-size: 2.5rem; /* Utilisez rem au lieu de px pour une meilleure adaptabilité */
   position: absolute;
-  left: 870px;
-  margin-bottom: 30px;
+  left: 54.5%; /* Centré horizontalement */
+  margin-bottom: 3rem;
+  transform: translateX(-50%); 
   z-index: 999;
 }
-
 .About-links {
- display: flex;
- position: absolute;
- right: 1245px;
- margin-top: 60px;
- z-index: 999;
-  font-size: 40px;
+  display: flex;
+  position: absolute;
+  right: 89rem; /* Utilisez rem pour une échelle relative */
+  top: 32rem; /* Utilisez rem pour une échelle relative */
+  font-size: 2.5rem;
+  z-index: 999;
 }
-
-.About-links:hover, .Parts-links:hover {
-  transform: translate(1.9%);
-}
-
 .ST2 img {
  z-index: 1;
   display: flex;
