@@ -1,28 +1,45 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../Catalogue-main/_Catalogue-main.scss";
 import { useVehicle } from "../DataStorage/InfoVehicle.jsx";
 import { fetchPieces } from "../../RequeteAPI/RequeteAPI";
-import { usePieces } from "../DataStorage/PiecesStorage";
-import { categories } from "../../../data/categories";
+import { useNavigate } from "react-router-dom";
 
 const Catalogue_Pieces = () => {
   const { vehicle } = useVehicle();
-  const { pieces, setPieces } = usePieces();
+
+  const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const loadPieces = async () => {
+    const loadCategories = async () => {
       try {
-        const data = await fetchPieces(); // Appelle l'API pour récupérer les pièces
-        setPieces(data); // Stocke les pièces dans le contexte
+        const data = await fetchPieces(); // Charge les données depuis l'API
+
+        // Transformation pour regrouper les catégories et sous-catégories
+        const groupedCategories = data.reduce((acc, item) => {
+          // Trouver ou créer une catégorie
+          let category = acc.find((cat) => cat.name === item.Catégories);
+          if (!category) {
+            category = { id: acc.length + 1, name: item.Catégories, items: [] };
+            acc.push(category);
+          }
+
+          // Ajouter la sous-catégorie si elle n'existe pas déjà
+          if (!category.items.includes(item.SubCatégories)) {
+            category.items.push(item.SubCatégories);
+          }
+
+          return acc;
+        }, []);
+
+        setCategories(groupedCategories); // Stocke les catégories transformées
       } catch (error) {
-        console.error("Erreur lors du chargement des pièces :", error);
+        console.error("Erreur lors du chargement des catégories :", error);
       }
     };
 
-    loadPieces(); // Charge les pièces au chargement du composant
-  }, [setPieces]);
-
-  pieces;
+    loadCategories();
+  }, []);
 
   return (
     <>
@@ -48,110 +65,27 @@ const Catalogue_Pieces = () => {
 
       <main>
         <div className="categories-main">
-          <div className="categories">
-            <ul className="category-content">
-              {categories
-                .filter((category) => category.id === 1)
-                .map((category) => (
-                  <li key={category.id}>
-                    <span className="name-category">{category.name}</span>
+          {categories.map((category) => (
+            <div className="categories" key={category.id}>
+              <ul className="category-content">
+                <li>
+                  <span className="name-category">{category.name}</span>
+                </li>
+              </ul>
+              <div className="sub-category-main">
+                {category.items.map((item, index) => (
+                  <li
+                    key={index}
+                    onClick={() =>
+                      navigate(`/subcategory/${category.id}/${encodeURIComponent(item)}`)
+                    }
+                  >
+                    <span className="sub-category">{item}</span>
                   </li>
                 ))}
-              <div className="sub-category-main">
-                {categories
-                  .find((category) => category.id === 1)
-                  .items.map((item, index) => (
-                    <li key={index}>
-                      <span className="sub-category">{item}</span>
-                    </li>
-                  ))}
               </div>
-            </ul>
-          </div>
-
-          <div className="categories">
-            <ul className="category-content">
-              {categories
-                .filter((category) => category.id === 2)
-                .map((category) => (
-                  <li key={category.id}>
-                    <span className="name-category">{category.name}</span>
-                  </li>
-                ))}
-              <div className="sub-category-main">
-                {categories
-                  .find((category) => category.id === 2)
-                  .items.map((item, index) => (
-                    <li key={index}>
-                      <span className="sub-category">{item}</span>
-                    </li>
-                  ))}
-              </div>
-            </ul>
-          </div>
-
-          <div className="categories">
-            <ul className="category-content">
-              {categories
-                .filter((category) => category.id === 3)
-                .map((category) => (
-                  <li key={category.id}>
-                    <span className="name-category">{category.name}</span>
-                  </li>
-                ))}
-              <div className="sub-category-main">
-                {categories
-                  .find((category) => category.id === 3)
-                  .items.map((item, index) => (
-                    <li key={index}>
-                      <span className="sub-category">{item}</span>
-                    </li>
-                  ))}
-              </div>
-            </ul>
-          </div>
-
-          <div className="categories">
-            <ul className="category-content">
-              {categories
-                .filter((category) => category.id === 4)
-                .map((category) => (
-                  <li key={category.id}>
-                    <span className="name-category">{category.name}</span>
-                  </li>
-                ))}
-              <div className="sub-category-main">
-                {categories
-                  .find((category) => category.id === 4)
-                  .items.map((item, index) => (
-                    <li key={index}>
-                      <span className="sub-category">{item}</span>
-                    </li>
-                  ))}
-              </div>
-            </ul>
-          </div>
-
-          <div className="categories">
-            <ul className="category-content">
-              {categories
-                .filter((category) => category.id === 5)
-                .map((category) => (
-                  <li key={category.id}>
-                    <span className="name-category">{category.name}</span>
-                  </li>
-                ))}
-              <div className="sub-category-main">
-                {categories
-                  .find((category) => category.id === 5)
-                  .items.map((item, index) => (
-                    <li key={index}>
-                      <span className="sub-category">{item}</span>
-                    </li>
-                  ))}
-              </div>
-            </ul>
-          </div>
+            </div>
+          ))}
         </div>
       </main>
     </>
