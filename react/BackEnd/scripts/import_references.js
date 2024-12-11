@@ -5,7 +5,7 @@ const Database = require("better-sqlite3"); // Pour la base SQLite
 // Configuration de la base SQLite
 let db;
 try {
-  db = new Database("catalogueCLIOIV.db");
+  db = new Database("catalogue.db");
   console.log("Base de données SQLite connectée.");
 } catch (err) {
   console.error("Erreur lors de la connexion à SQLite :", err.message);
@@ -26,8 +26,8 @@ try {
       SubCatégories TEXT,
       type_piece TEXT,
       ref_oe TEXT,
-      fournisseur TEXT,
       ref_fournisseur TEXT,
+      fournisseur TEXT,
       prix REAL,
       commentaires TEXT
     )
@@ -43,7 +43,7 @@ function insererDonnees(donnees) {
   try {
     const stmt = db.prepare(`
       INSERT INTO Vehicules_Pieces 
-      (id_vehicule, marque, modele, version, annee, "Catégories", "SubCatégories", type_piece, ref_oe, fournisseur, ref_fournisseur, prix, commentaires)
+      (id_vehicule, marque, modele, version, annee, "Catégories", "SubCatégories", type_piece, ref_oe, ref_fournisseur, fournisseur, prix, commentaires)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
     stmt.run(
@@ -56,8 +56,8 @@ function insererDonnees(donnees) {
       donnees.SubCatégories,
       donnees["Type de Pièce"],
       donnees["Référence OE"],
+      donnees["Réferences Fournisseur"],
       donnees.Fournisseur,
-      donnees["Référence Fournisseur"],
       donnees.Prix,
       donnees.Commentaires
     );

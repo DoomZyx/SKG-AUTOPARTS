@@ -3,7 +3,7 @@ const Database = require("better-sqlite3");
 const router = express.Router();
 
 // Configuration de la base SQLite avec better-sqlite3
-const db = new Database("./db/catalogueCLIOIV.db");
+const db = new Database("./db/catalogue.db");
 
 // Route pour récupérer toutes les pièces
 router.get("/", (req, res) => {
