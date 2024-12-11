@@ -3,22 +3,24 @@ import { Link } from "react-router-dom";
 import { ModalCategories } from "../../Modal/Modal";
 import "../Catalogue-nav/_Catalogue-nav.scss";
 import { categories } from "../../../data/categories";
+import  promodisque  from "../../../assets/promodisque.png";
 
 function NavCatalogue() {
   const [isPieceModal, setPieceModal] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
+  const [showImage, setShowImage] = useState(true); // Nouvel état pour gérer l'affichage de l'image
 
   const handleCategoryClick = (categoryId) => {
     // Active ou désactive une catégorie
     setActiveCategory(activeCategory === categoryId ? null : categoryId);
+    setShowImage(false); // Cache l'image lorsque l'utilisateur clique sur une catégorie
   };
 
   const handleOpenPiecesModal = () => setPieceModal(true);
-  const handleClosePiecesModal = () => setPieceModal(false);
-
-  const handleClose = () => {
-    setModalOpen(false);
+  const handleClosePiecesModal = () => {
+    setPieceModal(false);
     setActiveCategory(null); // Réinitialise les sous-catégories
+    setShowImage(true); // Réaffiche l'image lorsque la modal est fermée
   };
 
   return (
@@ -64,17 +66,18 @@ function NavCatalogue() {
             </ul>
           </div>
 
-          {/* Colonne de droite : Sous-catégories */}
+          {/* Colonne de droite : Sous-catégories ou image */}
           <div className="modal-right">
-            {activeCategory ? (
+            {showImage ? (
+              <div>
+                <img
+                  src={ promodisque }
+                  alt="Promotion disques"
+                  className="promo-image"
+                />
+              </div>
+            ) : activeCategory ? (
               <>
-                <h3 className="sub-category-title">
-                  {
-                    categories.find(
-                      (category) => category.id === activeCategory
-                    ).name
-                  }
-                </h3>
                 <ul className="sub-category-list">
                   {categories
                     .find((category) => category.id === activeCategory)
@@ -85,9 +88,7 @@ function NavCatalogue() {
                     ))}
                 </ul>
               </>
-            ) : (
-              null
-            )}
+            ) : null}
           </div>
         </div>
       </ModalCategories>
