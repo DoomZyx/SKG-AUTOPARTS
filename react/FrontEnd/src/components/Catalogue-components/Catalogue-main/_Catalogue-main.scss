@@ -6,31 +6,42 @@
  gap: 50px;
  padding-top: 60px;
  padding-bottom: 50px;
- width: 100%;
- height: 100%;
- min-height: 100vh;
 }
 .categories {
  border: 1px solid white;
  border-radius: 50px;
  padding: 35px;
+ max-height: 500px;
+ box-sizing: border-box;
  width: 500px;
+ overflow-y: scroll;
+ overflow-x: hidden;
+}
+.categories::-webkit-scrollbar {
+ display: none;
 }
 .name-category {
- font-size: 38px;
+ font-size: 3.2rem;
  display: inline-block;
  position: relative;
+ padding: 15px 0px 20px 0px;
 }
 .name-category:after {
  content: "";
  position: absolute;
  bottom: 0;
  left: 0;
- width: 120%;
+ width: 23.35vw;
  height: 1px;
  background-color: white;
  margin: 0 -34px
 }
 .sub-category {
- font-size: 24px;
+ font-size: 2em;
+ }
+.sub-category-main {
+  padding: 30px 0px 0px 10px;
+  & li {
+   margin-bottom: 17px;
+  }
 }

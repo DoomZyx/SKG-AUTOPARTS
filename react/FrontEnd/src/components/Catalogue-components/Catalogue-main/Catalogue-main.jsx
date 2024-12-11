@@ -48,7 +48,6 @@ const Catalogue_Pieces = () => {
 
       <main>
         <div className="categories-main">
-
           <div className="categories">
             <ul className="category-content">
               {categories
@@ -58,13 +57,15 @@ const Catalogue_Pieces = () => {
                     <span className="name-category">{category.name}</span>
                   </li>
                 ))}
-              {categories
-                .find((category) => category.id === 1)
-                .items.map((item, index) => (
-                  <li key={index}>
-                    <span className="sub-category">{item}</span>
-                  </li>
-                ))}
+              <div className="sub-category-main">
+                {categories
+                  .find((category) => category.id === 1)
+                  .items.map((item, index) => (
+                    <li key={index}>
+                      <span className="sub-category">{item}</span>
+                    </li>
+                  ))}
+              </div>
             </ul>
           </div>
 
@@ -77,13 +78,15 @@ const Catalogue_Pieces = () => {
                     <span className="name-category">{category.name}</span>
                   </li>
                 ))}
+              <div className="sub-category-main">
                 {categories
-                .find((category) => category.id === 2)
-                .items.map((item, index) => (
-                  <li key={index}>
-                    <span className="sub-category">{item}</span>
-                  </li>
-                ))}
+                  .find((category) => category.id === 2)
+                  .items.map((item, index) => (
+                    <li key={index}>
+                      <span className="sub-category">{item}</span>
+                    </li>
+                  ))}
+              </div>
             </ul>
           </div>
 
@@ -96,13 +99,15 @@ const Catalogue_Pieces = () => {
                     <span className="name-category">{category.name}</span>
                   </li>
                 ))}
+              <div className="sub-category-main">
                 {categories
-                .find((category) => category.id === 3)
-                .items.map((item, index) => (
-                  <li key={index}>
-                    <span className="sub-category">{item}</span>
-                  </li>
-                ))}
+                  .find((category) => category.id === 3)
+                  .items.map((item, index) => (
+                    <li key={index}>
+                      <span className="sub-category">{item}</span>
+                    </li>
+                  ))}
+              </div>
             </ul>
           </div>
 
@@ -115,13 +120,15 @@ const Catalogue_Pieces = () => {
                     <span className="name-category">{category.name}</span>
                   </li>
                 ))}
+              <div className="sub-category-main">
                 {categories
-                .find((category) => category.id === 4)
-                .items.map((item, index) => (
-                  <li key={index}>
-                    <span className="sub-category">{item}</span>
-                  </li>
-                ))}
+                  .find((category) => category.id === 4)
+                  .items.map((item, index) => (
+                    <li key={index}>
+                      <span className="sub-category">{item}</span>
+                    </li>
+                  ))}
+              </div>
             </ul>
           </div>
 
@@ -134,13 +141,15 @@ const Catalogue_Pieces = () => {
                     <span className="name-category">{category.name}</span>
                   </li>
                 ))}
+              <div className="sub-category-main">
                 {categories
-                .find((category) => category.id === 5)
-                .items.map((item, index) => (
-                  <li key={index}>
-                    <span className="sub-category">{item}</span>
-                  </li>
-                ))}
+                  .find((category) => category.id === 5)
+                  .items.map((item, index) => (
+                    <li key={index}>
+                      <span className="sub-category">{item}</span>
+                    </li>
+                  ))}
+              </div>
             </ul>
           </div>
         </div>
