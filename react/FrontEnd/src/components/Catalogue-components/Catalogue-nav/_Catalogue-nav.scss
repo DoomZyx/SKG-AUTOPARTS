@@ -5,7 +5,6 @@
   background-position: 0cm -1cm;
   background-repeat: no-repeat;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
 }
 .nav-info-container {
   display: flex;
@@ -61,7 +60,7 @@
   border-radius: 5px;
 }
 .piece-modal.active {
-  display: block; /* Affiche lorsque nécessaire */
+  display: block;
 }
 .nav-categories ul {
   display: inline-flex;
@@ -109,7 +108,6 @@
   height: auto;
   border-top: 0.1px solid white;
   border-bottom: 0.1px solid white;
-  background-color: rgba(0, 0, 0, 0.25);
 }
 // Modale Catégories
 
