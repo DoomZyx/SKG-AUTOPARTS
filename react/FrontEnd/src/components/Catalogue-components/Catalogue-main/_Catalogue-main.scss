@@ -1,9 +1,10 @@
 .categories-main {
  display: flex;
  flex-direction: row;
- justify-content: space-around;
+ justify-content: center;
  flex-wrap: wrap;
- gap: 50px;
+ width: 100%;
+ gap: 70px;
  padding-top: 100px;
  padding-bottom: 10em;
  backdrop-filter: blur(0px); 
@@ -11,10 +12,10 @@
 .categories {
  border: 1px solid white;
  border-radius: 50px;
- padding: 35px;
+ padding: 35px 35px 35px 35px ;
  max-height: 500px;
  box-sizing: border-box;
- width: 600px;
+ width: 500px;
  overflow-y: scroll;
  overflow-x: hidden;
 }
