@@ -16,7 +16,7 @@ try {
     DROP TABLE IF EXISTS vehicles;
 
     CREATE TABLE vehicles (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      id INTEGER PRIMARY KEY,
       plate_number TEXT UNIQUE NOT NULL,
       brand TEXT NOT NULL,
       model TEXT NOT NULL,
@@ -38,13 +38,19 @@ try {
 
   console.log("Données initiales insérées.");
 } catch (err) {
-  console.error("Erreur lors de la création ou de l'insertion des données :", err.message);
+  console.error(
+    "Erreur lors de la création ou de l'insertion des données :",
+    err.message
+  );
 } finally {
   // Fermer la base de données
   try {
     db.close();
     console.log("Connexion à la base de données fermée.");
   } catch (err) {
-    console.error("Erreur lors de la fermeture de la base de données :", err.message);
+    console.error(
+      "Erreur lors de la fermeture de la base de données :",
+      err.message
+    );
   }
 }

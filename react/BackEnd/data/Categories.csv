@@ -1,0 +1,94 @@
+ID,categories,image_categories,pieces,image_pieces
+1,Vidange,,Filtre à Huile,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\filtre-a-huile.png
+1,Vidange,,Filtre à Carburant,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\filtre-gasoil.png
+1,Vidange,,Filtre à Air,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\filtre-a-air.png
+1,Vidange,,Filtre Habitacle ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\filtre-habitacle.png
+2,Freinage,,Plaquette AV,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\plaquav.png
+2,Freinage,,Disque AV,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\disque.png
+2,Freinage,,Plaquette AR,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\plaquav.png
+2,Freinage,,Disque AR,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\disque.png
+2,Freinage,,Étrier,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\etrier.png
+2,Freinage,,Étrier,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\etrier.png
+2,Freinage,,Étrier,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\etrier.png
+2,Freinage,,Étrier,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\etrier.png
+2,Freinage,,Maitre-cylindre,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\maitre-cylindre.png
+2,Freinage,,Servo-frein,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\servo-frein.png
+2,Freinage,,Capteur ABS,
+2,Freinage,,Kit réparation étrier,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\kit-de-reparation-etrier.png
+2,Freinage,,Fléxible de frein ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\flexible.png
+2,Freinage,,Fléxible de frein ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\flexible.png
+2,Freinage,,Fléxible de frein ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\flexible.png
+2,Freinage,,Fléxible de frein ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\flexible.png
+2,Freinage,,Câbles de Frein,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\cable_frein.png
+2,Freinage,,Câbles de Frein,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\cable_frein.png
+3,Direction,,Triangle ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\triangle.png
+3,Direction,,Triangle ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\triangle.png
+3,Direction,,Rotule,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\rotule-suspension.png
+3,Direction,,Rotule,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\rotule-suspension.png
+3,Direction,,Bielette de barre stabilisatrice,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\barre-stab.png
+3,Direction,,Bielette de barre stabilisatrice,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\barre-stab.png
+3,Direction,,Rotule Axial,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\rotule-axiale.png
+3,Direction,,Rotule de direction,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\rotule.png
+3,Direction,,Rotule de direction,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\rotule.png
+4,Suspension,,Roulement ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\roulement-roue.png
+4,Suspension,,Roulement ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\roulement-roue.png
+4,Suspension,,Amortisseur ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\amortisseur-av.png
+4,Suspension,,Amortisseur ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\amortisseur-av.png
+4,Suspension,,Amortisseur ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\amortisseur-arriere.png
+4,Suspension,,Amortisseur ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\amortisseur-arriere.png
+4,Suspension,,Ressort ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\ressort.png
+4,Suspension,,Ressort,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\ressort.png
+4,Suspension,,Ressort,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\ressort.png
+4,Suspension,,Ressort,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\ressort.png
+4,Suspension,,Coupelle de suspension,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\coupelle.png
+4,Suspension,,Coupelle de suspension,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\coupelle.png
+5,Pièces Moteur,,Bougie,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\bougie.png
+5,Pièces Moteur,,Kit Distribution,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\kit-distribution.png
+5,Pièces Moteur,,Pompe à eau ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\pompe-a-eau.png
+5,Pièces Moteur,,Thermostat ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\thermostat.png
+5,Pièces Moteur,,Pompe à Huile ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\pompe-a-huile.png
+5,Pièces Moteur,,Jauge d'huile,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\jauge.png
+5,Pièces Moteur,,Pompe à Carburant,react\BackEnd\public\image_pieces\pompe-carburant.png
+5,Pièces Moteur,,Injecteur ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\injecteur.png
+5,Pièces Moteur,,Radiateur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\radiateur.png
+5,Pièces Moteur,,Joints d'injecteur ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\joint-injecteur.png
+5,Pièces Moteur,,Joint de culasse / cache-soupape,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\joint-culasse.png
+5,Pièces Moteur,,Vanne EGR ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\vanne_EGR.png
+5,Pièces Moteur,,Débimetre,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\debitmetre.png
+5,Pièces Moteur,,TurboCompresseur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\turbocompresseur.png
+5,Pièces Moteur,,Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\echappement.png
+5,Pièces Moteur,,Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\echappement.png
+5,Pièces Moteur,,Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\echappement.png
+6,Boite de Vitesse,,Cardan,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\cardan.png
+6,Boite de Vitesse,,Cardan,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\cardan.png
+6,Boite de Vitesse,,Soufflet de Cardan ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\soufflet-cardan.png
+6,Boite de Vitesse,,Palier de Cardan,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\palier.png
+6,Boite de Vitesse,,Embrayage ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\embrayage.png
+6,Boite de Vitesse,,Emetteur ,react\BackEnd\public\image_pieces\emetteur.png
+6,Boite de Vitesse,,Recepteur ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\recepteur.png
+6,Boite de Vitesse,,Câble de boite / Embrayage,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\cable-boite.png
+7,Électronique,,Démarreur ,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\demarreur.png
+7,Électronique,,Alternateur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\alternateur.png
+7,Électronique,,Batterie,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\batterie.png
+8,Capteur,,Capteur et Sonde Moteur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Moteur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Moteur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Moteur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Moteur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Moteur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Moteur,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde Échappement,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde de Température,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde de Température,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde de Température,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde de Température,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde de Température,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur et Sonde de Température,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur Aide à la Conduite,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png
+8,Capteur,,Capteur Aide à la Conduite,C:\Users\Axel\Documents\SKG AUTOPARTS\react\BackEnd\public\image_pieces\capteur.png

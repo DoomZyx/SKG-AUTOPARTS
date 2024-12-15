@@ -5,7 +5,7 @@ const Database = require("better-sqlite3"); // Pour la base SQLite
 // Configuration de la base SQLite
 let db;
 try {
-  db = new Database("catalogue.db");
+  db = new Database("parts.db");
   console.log("Base de données SQLite connectée.");
 } catch (err) {
   console.error("Erreur lors de la connexion à SQLite :", err.message);
@@ -16,23 +16,16 @@ try {
 try {
   db.exec(`
     CREATE TABLE IF NOT EXISTS Vehicules_Pieces (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      id_vehicule INTEGER,
-      marque TEXT,
-      modele TEXT,
-      version TEXT,
-      annee TEXT,
-      Catégories TEXT,
+      ID INTEGER,
       SubCatégories TEXT,
       type_piece TEXT,
       ref_oe TEXT,
       ref_fournisseur TEXT,
       fournisseur TEXT,
-      prix REAL,
-      commentaires TEXT
+      prix REAL
     )
   `);
-  console.log("Table Vehicules_Pieces prête.");
+  console.log("Table parts prête.");
 } catch (err) {
   console.error("Erreur lors de la création de la table :", err.message);
   process.exit(1);
@@ -43,23 +36,17 @@ function insererDonnees(donnees) {
   try {
     const stmt = db.prepare(`
       INSERT INTO Vehicules_Pieces 
-      (id_vehicule, marque, modele, version, annee, "Catégories", "SubCatégories", type_piece, ref_oe, ref_fournisseur, fournisseur, prix, commentaires)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      (ID, "SubCatégories", type_piece, ref_oe, ref_fournisseur, fournisseur, prix)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
     `);
     stmt.run(
-      donnees.ID_Vehicule,
-      donnees.Marque,
-      donnees.Modèle,
-      donnees["Version/Moteur"],
-      donnees.Année,
-      donnees.Catégories,
+      donnees.id,
       donnees.SubCatégories,
       donnees["Type de Pièce"],
       donnees["Référence OE"],
       donnees["Réferences Fournisseur"],
       donnees.Fournisseur,
-      donnees.Prix,
-      donnees.Commentaires
+      donnees.Prix
     );
   } catch (err) {
     console.error(`Erreur lors de l'insertion : ${err.message}`);
